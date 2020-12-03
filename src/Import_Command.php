@@ -127,7 +127,9 @@ class Import_Command extends WP_CLI_Command {
 			if ( isset( $wxr_author['author_last_name'] ) ) {
 				$author->last_name = $wxr_author['author_last_name'];
 			}
-
+      if ( isset( $wxr_author['tempest_site_id'] ) ) {
+        $author->tempest_site_id = $wxr_author['tempest_site_id'];
+      }
 			$author_data[] = $author;
 		}
 
